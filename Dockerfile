@@ -1,5 +1,5 @@
 # Build the go application into a binary
-FROM maven:openjdk-18 as builder
+FROM amd64/maven as builder
 WORKDIR /app
 COPY . ./
 RUN mvn clean install && \mvn clean package
